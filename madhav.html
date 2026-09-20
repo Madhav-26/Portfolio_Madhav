@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhav Jagtap | Presentation & Data Visualization Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            50: '#F8FAFC',
+                            100: '#F1F5F9',
+                            800: '#1E293B',
+                            900: '#0F172A',
+                            950: '#020617',
+                        },
+                        brand: {
+                            blue: '#2563EB',
+                            lightBlue: '#3B82F6',
+                            accent: '#6366F1',
+                        }
+                    },
+                    boxShadow: {
+                        'slide': '0 20px 40px -15px rgba(15, 23, 42, 0.08), 0 0 15px rgba(0, 0, 0, 0.03)',
+                        'card-hover': '0 25px 50px -12px rgba(37, 99, 235, 0.12)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F8FAFC;
+            color: #0F172A;
+        }
+        .slide-ratio {
+            aspect-ratio: 16 / 9;
+        }
+        .glass-badge {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Name -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-navy-900 text-white font-bold text-lg flex items-center justify-center shadow-md group-hover:bg-brand-blue transition-colors">
+                        MJ
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg tracking-tight text-navy-900 group-hover:text-brand-blue transition-colors">Madhav Jagtap</span>
+                        <span class="text-xs text-slate-500 font-medium -mt-1">Data & Visual Storyteller</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <a href="#about" class="hover:text-brand-blue transition-colors">About</a>
+                    <a href="#work" class="hover:text-brand-blue transition-colors">Selected Work</a>
+                    <a href="#approach" class="hover:text-brand-blue transition-colors">Design Approach</a>
+                    <a href="#process" class="hover:text-brand-blue transition-colors">Process</a>
+                    <a href="#skills" class="hover:text-brand-blue transition-colors">Skills</a>
+                    <a href="#education" class="hover:text-brand-blue transition-colors">Education</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-navy-900 hover:bg-brand-blue shadow-sm transition-all duration-200">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-navy-900">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-600 font-medium hover:text-brand-blue">About</a>
+            <a href="#work" class="block py-2 text-slate-600 font-medium hover:text-brand-blue">Selected Work</a>
+            <a href="#approach" class="block py-2 text-slate-600 font-medium hover:text-brand-blue">Design Approach</a>
+            <a href="#process" class="block py-2 text-slate-600 font-medium hover:text-brand-blue">Process</a>
+            <a href="#skills" class="block py-2 text-slate-600 font-medium hover:text-brand-blue">Skills</a>
+            <a href="#education" class="block py-2 text-slate-600 font-medium hover:text-brand-blue">Education</a>
+            <a href="#contact" class="block w-full text-center py-3 bg-brand-blue text-white font-semibold rounded-xl mt-4">Get In Touch</a>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-16">
+
+        <!-- HERO SECTION -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-brand-blue text-xs font-bold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
+                        Executive Data & Presentation Designer
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-[1.15]">
+                        Turning Complex Data Into <span class="text-brand-blue">Clear Visual Stories.</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl font-medium text-slate-600 max-w-2xl">
+                        Presentation Design • Data Visualization • Visual Storytelling • Information Design
+                    </p>
+
+                    <p class="text-base text-slate-600 leading-relaxed max-w-2xl">
+                        B.E. AI & Data Science candidate at Vishwakarma Institute of Technology, Pune (9.29 CGPA). I transform dense analytics, SQL queries, and Power BI dashboards into clean, decision-ready executive slide decks and high-impact visual narratives.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <a href="#work" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-white bg-brand-blue hover:bg-blue-700 shadow-lg shadow-blue-500/20 transition-all duration-200">
+                            <span>View My Work</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="mailto:jagtapmadhav45@gmail.com" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 hover:text-navy-900 transition-all duration-200">
+                            <i data-lucide="mail" class="w-5 h-5 text-slate-500"></i>
+                            <span>Contact Madhav</span>
+                        </a>
+                    </div>
+
+                    <!-- Key Metrics Line -->
+                    <div class="pt-6 grid grid-cols-3 gap-6 border-t border-slate-200 max-w-lg">
+                        <div>
+                            <div class="text-2xl font-extrabold text-navy-900">9.29</div>
+                            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">VIT Pune CGPA</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-extrabold text-navy-900">92.46%</div>
+                            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">MSBTE Score</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-extrabold text-navy-900">3+</div>
+                            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">BI Dashboards</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Column: 16:9 Presentation Card Preview featuring Madhav's Photo -->
+                <div class="lg:col-span-5">
+                    <div class="relative group">
+                        <!-- Card Container styled like an Executive Slide Deck Preview -->
+                        <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-slide border border-slate-200/90 relative overflow-hidden transition-all duration-300 group-hover:shadow-card-hover">
+                            
+                            <!-- Slide Header Bar -->
+                            <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                                </div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Slide 01 // Executive Profile</span>
+                            </div>
+
+                            <!-- Presentation Main Container -->
+                            <div class="relative rounded-xl overflow-hidden bg-gradient-to-b from-slate-100 to-slate-200 border border-slate-200/80 aspect-[4/5] sm:aspect-[4/4.5] flex items-end justify-center">
+                                
+                                <!-- Background Subtle Grid -->
+                                <div class="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+
+                                <!-- Actual Headshot Image Rendered Directly -->
+                                <img 
+                                    src="C:\Users\msura\OneDrive\Desktop\power bi\resume\resumeimagesetthis.png"
+                                    onerror="this.onerror=null; this.src='resumeimagesetthis.png';"
+                                    alt="Madhav Jagtap - Headshot" 
+                                    class="relative z-10 w-full h-full object-cover object-top filter brightness-[1.02] contrast-[1.02]"
+                                />
+
+                                <!-- Floating Badge 1: Academic Badge -->
+                                <div class="absolute top-4 left-4 z-20 glass-badge rounded-xl px-3.5 py-2 shadow-sm flex items-center gap-2.5">
+                                    <div class="w-7 h-7 rounded-lg bg-blue-100 text-brand-blue flex items-center justify-center font-bold text-xs">
+                                        <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] font-bold text-slate-400 uppercase leading-none">Education</p>
+                                        <p class="text-xs font-bold text-navy-900 leading-tight">VIT Pune • 9.29 CGPA</p>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Badge 2: Key Expertise -->
+                                <div class="absolute bottom-4 right-4 z-20 glass-badge rounded-xl px-3.5 py-2 shadow-sm flex items-center gap-2">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></div>
+                                    <span class="text-xs font-bold text-navy-900">Power BI & Data Viz</span>
+                                </div>
+                            </div>
+
+                            <!-- Slide Footer Details -->
+                            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-500">
+                                <span class="flex items-center gap-1.5 text-navy-800 font-semibold">
+                                    <i data-lucide="check-circle2" class="w-4 h-4 text-emerald-600"></i>
+                                    Madhav Jagtap Profile
+                                </span>
+                                <span>AI & Data Science Specialist</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-16 bg-white border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold tracking-widest text-brand-blue uppercase">About The Storyteller</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-1">Bridging Data Engineering & Executive Design</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                   <div class="lg:col-span-5">
+    <div class="relative max-w-md mx-auto">
+        <!-- Subtle backdrop accent -->
+        <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-lg opacity-20"></div>
+        
+        <!-- 16:9 Presentation Executive Summary Card Replacement -->
+        <div class="relative bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden p-5 sm:p-6 font-sans">
+            <!-- Top Bar -->
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
+                <div class="flex items-center space-x-2">
+                    <span class="w-3 h-3 rounded-full bg-rose-400 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+                    <span class="ml-2 font-mono text-xs font-semibold text-slate-400 tracking-wider uppercase">SLIDE_01 // DATA_EXECUTIVE_SUMMARY</span>
+                </div>
+                <span class="font-mono text-xs font-bold text-blue-600 uppercase tracking-widest">16:9 VIEW</span>
+            </div>
+
+            <!-- Top Grid: 3 KPI Cards -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-4 mb-4">
+                <!-- Revenue Card -->
+                <div class="bg-slate-50 border border-slate-100 rounded-xl p-3 sm:p-4">
+                    <p class="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">TOTAL REVENUE</p>
+                    <p class="text-xl sm:text-2xl font-black text-slate-900 leading-tight">$4.82M</p>
+                    <p class="text-[10px] sm:text-xs font-semibold text-emerald-600 mt-1 flex items-center gap-0.5">
+                        +18.4% YoY
+                    </p>
+                </div>
+
+                <!-- Occupancy Card -->
+                <div class="bg-slate-50 border border-slate-100 rounded-xl p-3 sm:p-4">
+                    <p class="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">OCCUPANCY</p>
+                    <p class="text-xl sm:text-2xl font-black text-slate-900 leading-tight">84.2%</p>
+                    <p class="text-[10px] sm:text-xs font-semibold text-blue-600 mt-1">Optimal Range</p>
+                </div>
+
+                <!-- Margin Card -->
+                <div class="bg-slate-50 border border-slate-100 rounded-xl p-3 sm:p-4">
+                    <p class="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">MARGIN</p>
+                    <p class="text-xl sm:text-2xl font-black text-slate-900 leading-tight">32.6%</p>
+                    <p class="text-[10px] sm:text-xs font-semibold text-slate-500 mt-1">Stable</p>
+                </div>
+            </div>
+
+            <!-- Bottom Grid: Bar Chart & Donut Chart -->
+            <div class="grid grid-cols-12 gap-3 sm:gap-4 mb-4">
+                <!-- Quarterly Trend Dark Card -->
+                <div class="col-span-7 bg-[#0b132b] rounded-xl p-3 sm:p-4 text-white flex flex-col justify-between">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-mono text-[10px] sm:text-xs font-bold tracking-wider text-slate-300 uppercase">QUARTERLY_TREND</span>
+                        <span class="inline-flex items-center text-[10px] font-mono text-blue-400">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mr-1 animate-pulse"></span> LIVE
+                        </span>
+                    </div>
+                    <!-- Bar Chart Visual -->
+                    <div class="flex items-end justify-between h-16 gap-2 px-1">
+                        <div class="w-1/5 bg-slate-800 rounded-t h-[30%]"></div>
+                        <div class="w-1/5 bg-slate-800 rounded-t h-[50%]"></div>
+                        <div class="w-1/5 bg-blue-500 rounded-t h-[80%]"></div>
+                        <div class="w-1/5 bg-slate-800 rounded-t h-[40%]"></div>
+                        <div class="w-1/5 bg-blue-500 rounded-t h-[100%]"></div>
+                    </div>
+                </div>
+
+                <!-- Donut Chart Card -->
+                <div class="col-span-5 bg-slate-50 border border-slate-100 rounded-xl p-3 sm:p-4 flex flex-col items-center justify-center">
+                    <div class="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center">
+                        <!-- SVG Donut Chart -->
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                            <path class="text-slate-200" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="text-blue-500" stroke-dasharray="74, 100" stroke-width="3.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <span class="absolute font-bold text-xs sm:text-sm text-slate-800">74%</span>
+                    </div>
+                    <p class="text-[11px] font-semibold text-slate-600 mt-2">Category Share</p>
+                </div>
+            </div>
+
+            <!-- Footer Line -->
+            <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium pt-2 border-t border-slate-100">
+                <span>Madhav Jagtap — Visual Data Portfolio</span>
+                <span>Page 01 of 12</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <!-- About Text Content -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <h3 class="text-2xl font-bold text-navy-900">
+                            I turn massive raw datasets into intuitive, compelling visual narratives that drive strategic business decisions.
+                        </h3>
+
+                        <p class="text-slate-600 leading-relaxed">
+                            Currently pursuing my Bachelor of Engineering in Artificial Intelligence and Data Science at <strong>Vishwakarma Institute of Technology (VIT), Pune</strong>, I hold a <strong>9.29 CGPA</strong> and a strong technical foundation in SQL, Python, Power BI, DAX, and Data Modeling.
+                        </p>
+
+                        <p class="text-slate-600 leading-relaxed">
+                            What sets me apart is my ability to communicate analytics visually. I design slides, executive dashboards, and presentation decks that focus on visual hierarchy, clarity, and story flow—ensuring complex technical insights are immediately digestible for leadership and stakeholders.
+                        </p>
+
+                        <!-- Highlights Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                                <div class="text-brand-blue font-bold text-lg mb-1">Presentation Design</div>
+                                <div class="text-sm text-slate-600">Structured 16:9 slide frameworks built for executive brevity and readability.</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                                <div class="text-brand-blue font-bold text-lg mb-1">Advanced Business Intelligence</div>
+                                <div class="text-sm text-slate-600">Expertise in DAX calculations, Power Query ETL, and custom HTML/CSS visualization components.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SELECTED WORK SECTION -->
+        <section id="work" class="py-16 sm:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-brand-blue uppercase">Portfolio Case Studies</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-1">Featured Data & Presentation Projects</h2>
+                    </div>
+                    <p class="text-slate-500 text-sm max-w-md mt-2 md:mt-0">
+                        Click on any project slide below to open the complete presentation case study breakdown.
+                    </p>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                    <!-- PROJECT 1: Airbnb Analysis -->
+                    <div onclick="openModal('airbnb')" class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-slide hover:shadow-card-hover transition-all duration-300 cursor-pointer group flex flex-col">
+                        <div class="slide-ratio bg-navy-900 p-6 text-white flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute -right-8 -bottom-8 w-40 h-40 bg-blue-600/20 rounded-full blur-2xl"></div>
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-semibold z-10">
+                                <span class="px-2.5 py-1 rounded-md bg-white/10 text-white backdrop-blur">POWER BI & DAX</span>
+                                <span class="text-brand-lightBlue">SLIDE 01 / 03</span>
+                            </div>
+                            <div class="z-10 my-4">
+                                <h3 class="text-xl font-bold group-hover:text-brand-lightBlue transition-colors">Airbnb Booking & Revenue Analytics</h3>
+                                <p class="text-xs text-slate-300 mt-1 line-clamp-2">Interactive multi-page BI dashboard with custom HTML cards & dynamic filter trees.</p>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-white z-10">
+                                <span>Explore Case Study</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                            </div>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col justify-between bg-white">
+                            <div class="space-y-2">
+                                <div class="text-xs font-semibold text-slate-500">Key Tools & Tech:</div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Power BI</span>
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">DAX</span>
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Power Query</span>
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">HTML Visuals</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2: Walmart Sales -->
+                    <div onclick="openModal('walmart')" class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-slide hover:shadow-card-hover transition-all duration-300 cursor-pointer group flex flex-col">
+                        <div class="slide-ratio bg-slate-800 p-6 text-white flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute -right-8 -bottom-8 w-40 h-40 bg-emerald-600/20 rounded-full blur-2xl"></div>
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-semibold z-10">
+                                <span class="px-2.5 py-1 rounded-md bg-white/10 text-white backdrop-blur">SQL & POWER BI</span>
+                                <span class="text-emerald-400">SLIDE 02 / 03</span>
+                            </div>
+                            <div class="z-10 my-4">
+                                <h3 class="text-xl font-bold group-hover:text-emerald-400 transition-colors">Walmart Retail Sales Performance</h3>
+                                <p class="text-xs text-slate-300 mt-1 line-clamp-2">Executive sales tracking dashboard analyzing regional trends, profitability, and stock velocity.</p>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-white z-10">
+                                <span>Explore Case Study</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                            </div>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col justify-between bg-white">
+                            <div class="space-y-2">
+                                <div class="text-xs font-semibold text-slate-500">Key Tools & Tech:</div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">SQL</span>
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Power BI</span>
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Data Modeling</span>
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">DAX Measures</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3: Trips Report Analysis -->
+                    <div onclick="openModal('trips')" class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-slide hover:shadow-card-hover transition-all duration-300 cursor-pointer group flex flex-col">
+                        <div class="slide-ratio bg-indigo-950 p-6 text-white flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute -right-8 -bottom-8 w-40 h-40 bg-indigo-500/20 rounded-full blur-2xl"></div>
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-semibold z-10">
+                                <span class="px-2.5 py-1 rounded-md bg-white/10 text-white backdrop-blur">BUSINESS INTELLIGENCE</span>
+                                <span class="text-indigo-300">SLIDE 03 / 03</span>
+                            </div>
+                            <div class="z-10 my-4">
+                                <h3 class="text-xl font-bold group-hover:text-indigo-300 transition-colors">Trips & Mobility Report Analysis</h3>
+                                <p class="text-xs text-slate-300 mt-1 line-clamp-2">Urban transportation intelligence dashboard tracking trip volume, efficiency, and peak hours.</p>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-white z-10">
+                                <span>Explore Case Study</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                            </div>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col justify-between bg-white">
+                            <div class="space-y-2">
+                                <div class="text-xs font-semibold text-slate-500">Key Tools & Tech:</div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Power BI</span>
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">Power Query</span>
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">DAX</span>
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">ETL Pipeline</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DESIGN APPROACH SECTION -->
+        <section id="approach" class="py-16 bg-white border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold tracking-widest text-brand-blue uppercase">Methodology</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-1">Design Approach & Information Standards</h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                        How I transform unstructured spreadsheets and complex data models into crisp, executive-ready presentation slides.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-lg transition-all duration-200">
+                        <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center font-bold mb-4">
+                            <i data-lucide="book-open" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-2">Data Storytelling</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Crafting a narrative arc that leads executives directly from metric observation to actionable takeaway.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-lg transition-all duration-200">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold mb-4">
+                            <i data-lucide="layout" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-2">Information Design</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Grouping related insights into intuitive, modular 16:9 slide cards to minimize cognitive load.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-lg transition-all duration-200">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold mb-4">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-2">Visual Hierarchy</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Using strategic font scaling, weights, and restrained color accents to guide the viewer’s eye seamlessly.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-lg transition-all duration-200">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold mb-4">
+                            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-2">Data Visualization</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Choosing precise chart types—bar, line, heatmaps, or KPI callouts—that represent numerical facts without distortion.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PRESENTATION THINKING (4-STEP PROCESS) -->
+        <section id="process" class="py-16 sm:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold tracking-widest text-brand-blue uppercase">Structured Workflow</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-1">Presentation Thinking Process</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                    
+                    <!-- Step 1 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative z-10">
+                        <div class="text-3xl font-extrabold text-brand-blue/30 mb-2">01</div>
+                        <h3 class="text-base font-bold text-navy-900 mb-2">Understand</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Define the target audience, strategic core objective, and essential business metrics required.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative z-10">
+                        <div class="text-3xl font-extrabold text-brand-blue/30 mb-2">02</div>
+                        <h3 class="text-base font-bold text-navy-900 mb-2">Structure</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Clean data with Power Query/SQL and map out the slide layout flow with a clear visual hierarchy.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative z-10">
+                        <div class="text-3xl font-extrabold text-brand-blue/30 mb-2">03</div>
+                        <h3 class="text-base font-bold text-navy-900 mb-2">Visualize</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Build DAX measures, dynamic visuals, custom HTML components, and high-impact chart cards.
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative z-10">
+                        <div class="text-3xl font-extrabold text-brand-blue/30 mb-2">04</div>
+                        <h3 class="text-base font-bold text-navy-900 mb-2">Refine</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Optimize contrast, typography whitespace, alignment, and executive summaries for immediate presentation.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PRESENTATION WORK TYPES -->
+        <section class="py-16 bg-navy-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold tracking-widest text-brand-lightBlue uppercase">Slide Framework Capabilities</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-1">Presentation Formats I Deliver</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700">
+                        <i data-lucide="presentation" class="w-6 h-6 text-brand-lightBlue mb-3"></i>
+                        <h4 class="font-bold text-base mb-1">Pitch Decks</h4>
+                        <p class="text-xs text-slate-400">High-conviction, visual-first decks highlighting value propositions, traction, and core KPIs.</p>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700">
+                        <i data-lucide="briefcase" class="w-6 h-6 text-brand-lightBlue mb-3"></i>
+                        <h4 class="font-bold text-base mb-1">Business Reviews</h4>
+                        <p class="text-xs text-slate-400">Quarterly and monthly executive updates summarizing revenue, growth, and team performance.</p>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700">
+                        <i data-lucide="pie-chart" class="w-6 h-6 text-brand-lightBlue mb-3"></i>
+                        <h4 class="font-bold text-base mb-1">Data Storytelling</h4>
+                        <p class="text-xs text-slate-400">Transforming dense analytical dashboards into digestible slide-by-slide storylines.</p>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700">
+                        <i data-lucide="code-2" class="w-6 h-6 text-brand-lightBlue mb-3"></i>
+                        <h4 class="font-bold text-base mb-1">Technical Decks</h4>
+                        <p class="text-xs text-slate-400">Simplifying AI models, software architectures, and data engineering pipelines for business stakeholders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="py-16 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold tracking-widest text-brand-blue uppercase">Core Competencies</span>
+                    <h2 class="text-3xl font-extrabold text-navy-900 mt-1">Tools & Specializations</h2>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                    <span class="px-4 py-2 rounded-xl bg-blue-50 text-brand-blue font-bold text-sm border border-blue-200/80">Presentation Design</span>
+                    <span class="px-4 py-2 rounded-xl bg-blue-50 text-brand-blue font-bold text-sm border border-blue-200/80">Data Visualization</span>
+                    <span class="px-4 py-2 rounded-xl bg-blue-50 text-brand-blue font-bold text-sm border border-blue-200/80">Visual Storytelling</span>
+                    <span class="px-4 py-2 rounded-xl bg-blue-50 text-brand-blue font-bold text-sm border border-blue-200/80">Information Design</span>
+                    <span class="px-4 py-2 rounded-xl bg-blue-50 text-brand-blue font-bold text-sm border border-blue-200/80">Dashboard Design</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-100 text-slate-800 font-semibold text-sm border border-slate-200">Power BI</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-100 text-slate-800 font-semibold text-sm border border-slate-200">DAX</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-100 text-slate-800 font-semibold text-sm border border-slate-200">Power Query</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-100 text-slate-800 font-semibold text-sm border border-slate-200">SQL</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-100 text-slate-800 font-semibold text-sm border border-slate-200">Data Modeling</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-100 text-slate-800 font-semibold text-sm border border-slate-200">HTML Custom Visuals</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-100 text-slate-800 font-semibold text-sm border border-slate-200">Python</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCATION & ACHIEVEMENTS -->
+        <section id="education" class="py-16 sm:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Education Column -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-brand-blue text-white flex items-center justify-center font-bold">
+                                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                            </div>
+                            <h2 class="text-2xl font-extrabold text-navy-900">Education</h2>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Degree 1 -->
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-bold text-lg text-navy-900">Vishwakarma Institute of Technology, Pune</h3>
+                                    <span class="px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 text-xs font-bold">CGPA: 9.29</span>
+                                </div>
+                                <p class="text-brand-blue font-semibold text-sm">B.E. in Artificial Intelligence & Data Science</p>
+                                <p class="text-xs text-slate-500 mt-1">Aug 2024 – Jul 2027</p>
+                            </div>
+
+                            <!-- Degree 2 -->
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-bold text-lg text-navy-900">MSBTE Examination</h3>
+                                    <span class="px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 text-xs font-bold">Score: 92.46%</span>
+                                </div>
+                                <p class="text-slate-700 font-semibold text-sm">Diploma Engineering</p>
+                                <p class="text-xs text-slate-500 mt-1">Completed 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Achievements Column -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <h2 class="text-2xl font-extrabold text-navy-900">Achievements & Hackathons</h2>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-start gap-4">
+                                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
+                                    <i data-lucide="trophy" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-900 text-base">Hacktoberfest 2025 Hackathon Winner</h4>
+                                    <p class="text-xs text-slate-600 mt-0.5">Awarded first place for building an open-source analytics visualization framework.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-start gap-4">
+                                <div class="w-8 h-8 rounded-lg bg-blue-100 text-brand-blue flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
+                                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-900 text-base">Innovista Hackathon 2024</h4>
+                                    <p class="text-xs text-slate-600 mt-0.5">Developed "Fake Medicine Detection" solution integrating computer vision & verifiable QR data.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & RESUME SECTION -->
+        <section id="contact" class="py-16 bg-white border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="bg-navy-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                        
+                        <div class="lg:col-span-7 space-y-4">
+                            <span class="text-xs font-bold tracking-widest text-brand-lightBlue uppercase">Get In Touch</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Let's Create High-Impact Visual Stories Together.</h2>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl">
+                                Available for presentation design, executive dashboard engineering, data storytelling, and analytical deck consultation.
+                            </p>
+
+                            <div class="pt-4 flex flex-wrap gap-4 items-center">
+                                <a href="mailto:jagtapmadhav45@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-blue text-white font-bold text-sm hover:bg-blue-600 transition-colors">
+                                    <i data-lucide="mail" class="w-4 h-4"></i>
+                                    jagtapmadhav45@gmail.com
+                                </a>
+                                <a href="tel:8799814478" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 text-slate-200 font-bold text-sm hover:bg-slate-700 transition-colors">
+                                    <i data-lucide="phone" class="w-4 h-4"></i>
+                                    +91 8799814478
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5 bg-slate-800/90 p-6 rounded-2xl border border-slate-700 space-y-4">
+                            <h3 class="text-lg font-bold text-white flex items-center justify-between">
+                                <span>Quick Message</span>
+                                <i data-lucide="send" class="w-4 h-4 text-brand-lightBlue"></i>
+                            </h3>
+                            <form onsubmit="handleFormSubmit(event)" class="space-y-3">
+                                <div>
+                                    <input type="text" placeholder="Your Name" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-blue">
+                                </div>
+                                <div>
+                                    <input type="email" placeholder="Your Email" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-blue">
+                                </div>
+                                <div>
+                                    <textarea rows="3" placeholder="How can I help you?" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-blue"></textarea>
+                                </div>
+                                <button type="submit" class="w-full py-2.5 rounded-xl bg-brand-blue hover:bg-blue-600 font-bold text-xs text-white transition-colors">
+                                    Send Message
+                                </button>
+                            </form>
+                            <div id="form-message" class="hidden text-xs text-emerald-400 font-medium text-center">
+                                Message sent successfully! Madhav will contact you soon.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-50 border-t border-slate-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-slate-500">
+            <p>© 2026 Madhav Jagtap. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+                <a href="https://linkedin.com" target="_blank" class="hover:text-brand-blue transition-colors flex items-center gap-1">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+                </a>
+                <a href="https://github.com" target="_blank" class="hover:text-brand-blue transition-colors flex items-center gap-1">
+                    <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CASE STUDY MODAL DIALOG -->
+    <div id="modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 relative my-auto">
+            
+            <!-- Modal Close Button -->
+            <button onclick="closeModal()" class="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 z-20">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Dynamic Modal Content Wrapper -->
+            <div id="modal-content" class="p-6 sm:p-10">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const msg = document.getElementById('form-message');
+            msg.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 5000);
+        }
+
+        // Case Study Data Definitions
+        const caseStudies = {
+            airbnb: {
+                title: "Airbnb Booking & Revenue Analytics Dashboard",
+                subtitle: "Interactive Multi-Page BI Presentation Deck",
+                badge: "POWER BI & DAX",
+                problem: "Property managers lacked unified visibility into seasonal listing price trends, guest review scores, and revenue leakage across regions.",
+                objective: "Build an executive-ready Power BI slide presentation dashboard with drill-down DAX measures and clean HTML custom visuals.",
+                input: "Dataset containing 50,000+ booking records, room types, dynamic pricing models, host responses, and geographic coordinates.",
+                approach: "Structured data using Power Query ETL, established Star-Schema relationships, and designed high-contrast cards for executive KPIs.",
+                hierarchy: "Primary KPIs top-anchored -> Geographic mapping center-stage -> Monthly seasonal trend comparisons bottom.",
+                visuals: "Custom gauge indicators, HTML color-coded metric tables, and DAX dynamic timeframe switchers.",
+                insights: "Identified a 23% revenue drop in mid-week occupancy that could be reclaimed via localized dynamic discounts.",
+                result: "Streamlined stakeholder review meetings by reducing report generation time from 6 hours to real-time interactive slides."
+            },
+            walmart: {
+                title: "Walmart Retail Sales Performance Intelligence",
+                subtitle: "SQL-Driven Retail Deck & Dashboard",
+                badge: "SQL & POWER BI",
+                problem: "Regional branch managers had fragmented data regarding high-margin inventory velocity and branch-wise profit performance.",
+                objective: "Develop a streamlined reporting deck leveraging SQL views and Power BI metrics for quarterly executive reviews.",
+                input: "Multi-table relational SQL database storing daily transactional sales, customer demographics, inventory counts, and discounts.",
+                approach: "Wrote optimized SQL queries for aggregation, modeled DAX cumulative totals, and applied a restrained slate/emerald color palette.",
+                hierarchy: "Overall Revenue & Profitability top line -> Category breakdown left panel -> Regional map right panel.",
+                visuals: "Matrix visual with heatmap conditional formatting, waterfall profit charts, and moving-average trendlines.",
+                insights: "Uncovered that 15% of discounted product bundles were generating negative net margins during holiday weekends.",
+                result: "Enabled executive leadership to adjust promotional strategies, saving an estimated 4.2% in operating margins."
+            },
+            trips: {
+                title: "Trips & Mobility Performance Analysis Report",
+                subtitle: "Urban Transport Data Storytelling Deck",
+                badge: "BUSINESS INTELLIGENCE",
+                problem: "Urban transit planners were overwhelmed by massive raw GPS trip logs, making peak traffic bottlenecks difficult to diagnose.",
+                objective: "Create a narrative 16:9 presentation report translating complex geospatial trip data into clear decision slides.",
+                input: "Automated trip log files containing start/end timestamps, distance vectors, passenger counts, and fare breakdowns.",
+                approach: "Engineered calculated columns in Power Query to segment peak vs. off-peak commute hours and mapped geospatial trip density.",
+                hierarchy: "Executive Executive Summary -> Commute Density Maps -> Peak Hour Distribution -> Fare Yield Breakdown.",
+                visuals: "Arc GIS trip density visuals, donut charts for trip duration buckets, and key metric callout cards.",
+                insights: "Discovered that 8:00 AM - 9:30 AM accounted for 64% of total driver delay costs due to suboptimal route distribution.",
+                result: "Delivered a clean 10-slide executive presentation that received top honors for clarity and structured visual presentation."
+            }
+        };
+
+        // Modal Functionality
+        function openModal(key) {
+            const data = caseStudies[key];
+            if (!data) return;
+
+            const contentHTML = `
+                <div class="space-y-6">
+                    <div>
+                        <span class="inline-block px-3 py-1 rounded-md bg-blue-50 text-brand-blue text-xs font-bold uppercase tracking-wider mb-2">${data.badge}</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-900">${data.title}</h2>
+                        <p class="text-slate-500 text-sm font-semibold mt-1">${data.subtitle}</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Problem Statement</h4>
+                            <p class="text-xs text-slate-700 leading-relaxed font-medium">${data.problem}</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-blue-50/60 border border-blue-200">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-1">Core Objective</h4>
+                            <p class="text-xs text-slate-800 leading-relaxed font-medium">${data.objective}</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <h3 class="text-base font-bold text-navy-900 border-b border-slate-200 pb-2">Data & Design Breakdown</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                            <div class="p-3 rounded-lg bg-slate-50 border border-slate-100">
+                                <span class="font-bold text-navy-900 block mb-1">Data / Input</span>
+                                <span class="text-slate-600">${data.input}</span>
+                            </div>
+                            <div class="p-3 rounded-lg bg-slate-50 border border-slate-100">
+                                <span class="font-bold text-navy-900 block mb-1">Design Approach</span>
+                                <span class="text-slate-600">${data.approach}</span>
+                            </div>
+                            <div class="p-3 rounded-lg bg-slate-50 border border-slate-100">
+                                <span class="font-bold text-navy-900 block mb-1">Visual Hierarchy</span>
+                                <span class="text-slate-600">${data.hierarchy}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-navy-900 text-white space-y-3">
+                        <h3 class="text-sm font-bold text-brand-lightBlue uppercase tracking-wider">Key Insights & Final Impact</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <span class="text-slate-400 font-semibold block mb-0.5">Key Insight:</span>
+                                <span class="text-slate-200 leading-relaxed">${data.insights}</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-semibold block mb-0.5">Final Result:</span>
+                                <span class="text-slate-200 leading-relaxed">${data.result}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex justify-end">
+                        <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-colors">
+                            Close Case Study
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('modal-content').innerHTML = contentHTML;
+            document.getElementById('modal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Close Modal on backdrop click
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target.id === 'modal') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
